@@ -39,7 +39,7 @@ public class ProduitController {
 		produitService.updateProduit(produit);
 	}
 	
-	@DeleteMapping("/{ref}")
+	@DeleteMapping("/{reference}")
 	public void deleteProduit(@PathVariable String reference) {
 		produitService.deleteProduit(reference);
 	}
