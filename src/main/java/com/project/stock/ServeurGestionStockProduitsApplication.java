@@ -12,6 +12,7 @@ import com.project.stock.entity.User;
 import com.project.stock.repository.ProduitRepository;
 import com.project.stock.repository.RoleRepository;
 import com.project.stock.repository.UserRepository;
+import com.project.stock.util.RoleEnum;
 
 @SpringBootApplication
 public class ServeurGestionStockProduitsApplication {
@@ -31,10 +32,10 @@ public class ServeurGestionStockProduitsApplication {
 		
 		RoleRepository roleRepository = ctx.getBean(RoleRepository.class);
 		
-		Role roleUser = new Role("ROLE_USER");
+		Role roleUser = new Role(RoleEnum.ROLE_USER);
 		roleRepository.save(roleUser);
 		
-		Role roleAdmin = new Role("ROLE_ADMIN");
+		Role roleAdmin = new Role(RoleEnum.ROLE_ADMIN);
 		roleRepository.save(roleAdmin);
 		
 		UserRepository userRepository = ctx.getBean(UserRepository.class);

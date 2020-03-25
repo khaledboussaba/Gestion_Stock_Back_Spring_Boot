@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.project.stock.util.RoleEnum;
+
 @Entity
 public class Role {
 
@@ -18,8 +20,8 @@ public class Role {
 	public Role() {
 	}
 
-	public Role(String name) {
-		this.name = name;
+	public Role(RoleEnum role) {
+		this.name = role.getName();
 	}
 
 	@Override
